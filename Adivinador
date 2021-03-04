@@ -1,0 +1,27 @@
+using System;
+
+namespace Adivinador1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int resultado, adivinar, num;
+            Console.WriteLine("\t\t\tBienvenido a Adivinador de Numeros\t\t\t");
+            Console.WriteLine("\n\t\tAdivinaré el número que en el que estás pensando.\t\t");
+            Console.WriteLine("\nSigue los siguientes pasos al pie de la letra.");
+            Console.WriteLine("\n\n1. Piensa en un número, el que quieras");
+            Console.WriteLine("2. El número en el que piensas, multiplícalo por 2");
+            Console.WriteLine("3. A tu resultado, súmale 8.");
+            Console.WriteLine("4. Ahora, a tu resultado anterior, multiplícalo por 5.");
+            Console.WriteLine("Cuando hayas hecho todo eso, introduce el resultado.");
+            resultado = Convert.ToInt32(Console.ReadLine());
+            
+            num = resultado/10;
+            adivinar = num - 4;
+            
+            Console.WriteLine($"El número en el que pensabas era el... {adivinar}");
+            
+        }
+    }
+}
