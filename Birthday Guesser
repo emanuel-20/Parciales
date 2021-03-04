@@ -1,0 +1,32 @@
+using System;
+
+namespace BirthdayGuesser1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int res, un, dva, troi, quart, resultado;
+            Console.WriteLine("\t\t\t¡Bienvenido al Adivinador de Cumpleaños\t\t\t");
+            Console.WriteLine("\n\t\tPuedo adivinar tu fecha de cumpleaños\t\t");
+            Console.WriteLine("\nSólo sigue las siguientes instrucciones y verás la magia.");
+            Console.WriteLine("\n1. Anota el día en el que naciste en un lugar visible.");
+            Console.WriteLine("2. Ahora multiplícalo x 20");
+            Console.WriteLine("3. Ahora súmale 73");
+            Console.WriteLine("4. Amora multiplícalo x 5");
+            Console.WriteLine("5. Ahora súmale el mes de tu cumpleaños. Ejemplo: noviembre = turesultado+11");
+            Console.WriteLine("Ahora introduce el resultado en el cuadro de abajo.");
+            resultado = Convert.ToInt32(Console.ReadLine());
+            
+            res = resultado - 365;
+            
+            un = res / 1000;
+            dva = (res % 1000) / 100;
+            troi = (res % 1000) % 100 / 10;
+            quart = (((res % 1000) % 100) % 100) % 10 / 1;
+            
+            Console.WriteLine($"El resultado es... {res}");
+            Console.WriteLine($"Y tu fecha de cumpleaños es el... {un}{dva}/{troi}{quart}");
+        }
+    }
+}
